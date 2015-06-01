@@ -2,13 +2,19 @@
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,audio,canvas,details,figcaption,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,summary,time,video{border:0;outline:0;font-size:100%;font-weight:normal;vertical-align:baseline;background:transparent;margin:0;padding:0;}body{line-height:1;}article,aside,dialog,figure,footer,header,hgroup,nav,section,blockquote{display:block;}nav ul{list-style:none;}ol{list-style:none;}ul{list-style:none;}ul ul{list-style:circle;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:none;}ins{text-decoration:underline;}del{text-decoration:line-through;}mark{background:none;}abbr[title],dfn[title]{border-bottom:1px dotted #000;cursor:help;}table{border-collapse:collapse;border-spacing:0;}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}input[type=submit],input[type=button],button{margin:0!important;padding:0!important;}input,select,a img{vertical-align:middle;}
 
 /* Main CSS */
-body{
+
+/* Body */
+body {
 	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 	font-size: 1.1em;
 	width:50em;
 	margin:0 auto;
+	border: 1px #1b75bb solid;
+	position: relative;
 }
-header, footer{
+
+/* Header & Footer */
+header, footer {
 	display: block;
 	width: 100%;
 	background: #1b75bb; /* Old browsers */
@@ -23,63 +29,70 @@ header, footer{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b75bb', endColorstr='#054271',GradientType=0 ); /* IE6-8 */
 	color: #FFF;
 }
-header h1{
+header h1 {
 	font-size: 5em;
 	font-weight: bold;
 	text-transform: uppercase;
 	margin-left:8%;
 }
-header h2{
-	font-size: 1.7em;
+header h2 {
+	font-size: 1.4em;
 	text-transform: uppercase;
 	opacity: 0.5;
 	margin: 0 0 0 8%;
 }
-header ul{
+header ul {
 	display: inline-block;
 	clear: right;
 	list-style: none;
-	margin: 1.7em 0 1.7em 8%;
+	margin: 1.4em 0 1.7em 8%;
 	line-height: 1.4em;
 }
-header a, footer a{
+header a, footer a {
 	color: #FFF;
 	text-decoration: none;
 }
-header img{
+header img {
 	display: inline-block;
-	margin-left: 9em;
-	margin-bottom: -3.5em;
-	width: 20%;
+	position: absolute;
+	margin: -1em 0 0 9em;
 	text-align: right;
+	padding: 0.5em 0.5em 2.5em 0.5em;
+	background-color: #FFF;
+	border: 1px #EEE solid;
+		-moz-box-shadow: 1px 3px 20px 1px #000;
+	-webkit-box-shadow: 1px 3px 20px 1px #000;
+	-o-box-shadow: 1px 3px 20px 1px #000;
+	box-shadow: 1px 3px 20px 1px #000;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#000, Direction=161, Strength=20);
+	-webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg);
+	
 }
-nav{
+footer {
+	padding: 1em 0;
+	text-align: center;
+}
+
+/* Section generic */
+nav {
 	display:none;
 }
-section{
-	padding: 1.7em 0 0 8%;
-	margin-bottom: 1em;
-}
-section#experience, section#skills, section#values, section#influences, section#education{
-	border: 1px #1b75bb solid;
-}
-section#experience{
-	border-top: 0;
-}
-section#education{
-	border-bottom: 0;
-	margin-bottom: 0;
-	padding-bottom: 1.7em;
+section {
+	padding: 1.4em 8%;
 }
 /*
-section#experience{
+section#experience {
 	position: relative;
 	margin-left: 0;
 }
-section#experience section{
+section#experience section {
 	margin-left: 8%;
 }
-section#experience h1:first-child{
+section#experience h1:first-child {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -98,37 +111,65 @@ section#experience h1:first-child{
 	padding: 10px;
 }
 */
-section h1{
+section h1 {
 	font-size: 2em;
 	font-weight: bold;
-	margin: 0.3em 0;
-	color: #999;
-}
-section section{
-	margin-left: 0;
-}
-section section h1{
-	font-size: 1.3em;
-	font-weight: bold;
-	margin: 0.3em 0;
-	color: #000;
-}
-section p.timeline, section p.timeline a, section section h1:first-child{
-	font-size: 1em;
-	color: #999;
 	text-transform: uppercase;
-	text-decoration: none;
+	color: #999;
+	margin: 0 0 0.4em 0;
 }
-section#experience ul li:before{
-  content: "\00BB\00a0";
-}
-section ul{
+section ul {
 	line-height: 1.4em;
 }
-section section h1:first-child{
-	display: block;
+
+/* Inside Divs */
+section div {
+	margin: 1.4em 0 0;
+	position: relative;
 }
-footer{
-	padding: 1em 0;
-	text-align: center;
+section div img {
+	float:right;
+}
+section div h1, section div h1 a {
+	font-size: 1.4em;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+	text-transform: none;
+}
+section div h1 a {
+	font-size: 1em;
+}
+section div p, section div p a {
+	font-size: 1em;
+	color: #999;
+	text-decoration: none;
+	margin: 0.4em 0;
+}
+section div ul:first-of-type li:before {
+  content: "\00BB\00a0";
+}
+
+/* Section specific */
+section:first-of-type {
+	border-top: 0;
+}
+section:last-of-type {
+	border-bottom: 0;
+	margin-bottom: 0;
+}
+section#skills ul, section#education div:nth-of-type(3) ul {
+	display: inline-block;
+}
+section#skills ul:last-of-type, section#education div:nth-of-type(3) ul:last-of-type {
+	position: absolute;
+	left: 11em;
+}
+
+/* Icons for skills */
+.material-icons.blue {
+	color: #054271;
+}
+.material-icons.vertical {
+	vertical-align: top;
 }
